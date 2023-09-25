@@ -1,0 +1,39 @@
+<h1 class="mb-1 restaurant-show-title">新增餐廳</h1>
+<div class='container my-3'>
+  <div class='row'>
+    <div class="col-12 col-md-8 mx-auto">
+      <form class="card card-body" action='/restaurants' method='POST'>
+        <div class='mb-3'><label class='form-label'>餐廳名稱</label>
+          <input class='form-control' class='form-control' type='text' placeholder='name' name='name' required />
+        </div>
+        <div class='mb-3'><label class='form-label'>餐廳英文名稱</label>
+          <input class='form-control' type='text' placeholder='name_en' name='name_en' required />
+        </div>
+        <div class='mb-3'><label class='form-label'>類別</label>
+          <input class='form-control' type='text' placeholder='category' name='category' required />
+        </div>
+        <div class='mb-3'><label class='form-label'>圖片網址</label>
+          <input class='form-control' type='url' placeholder='image' name='image' required />
+        </div>
+        <div class='mb-3'><label class='form-label'>地址</label>
+          <input class='form-control' type='text' placeholder='location' name='location' required />
+        </div>
+        <div class='mb-3'><label class='form-label'>電話</label>
+          <input class='form-control' type='tel' placeholder='phone' name='phone' required />
+        </div>
+        <div class='mb-3'><label class='form-label'>地圖網址</label>
+          <input class='form-control' type='url' placeholder='google_map' name='google_map' required />
+        </div>
+        <div class='mb-3'><label class='form-label'>評價</label>
+          <input class='form-control' type='number' placeholder='rating' name='rating' required />
+        </div>
+        <div class='mb-3'><label class='form-label'>描述</label>
+          <textarea class='form-control' type='text' placeholder='description' name='description' required></textarea>
+        </div>
+        <div class="text-center">
+          <button type='submit' class='btn btn-outline-primary'>新增</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

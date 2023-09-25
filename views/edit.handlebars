@@ -1,0 +1,56 @@
+<div class="row my-5">
+  <div class="col-md-8 m-auto">
+    <div class="card card-body">
+      <form action="/restaurants/{{restaurant._id}}?_method=PUT" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label mb-2">餐廳名稱</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="請輸入名稱" value="{{restaurant.name}}">
+        </div>
+        <div class="mb-3">
+          <label for="name_en" class="form-label mb-2">英文名稱</label>
+          <input type="text" id="name_en" name="name_en" class="form-control" placeholder="請輸入英文名稱"
+            value="{{restaurant.name_en}}">
+        </div>
+        <div class="mb-3">
+          <label for="category" class="form-label mb-2">餐廳分類</label>
+          <input type="text" id="category" name="category" class="form-control" placeholder="請輸入分類"
+            value="{{restaurant.category}}">
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label mb-2">餐廳照片</label>
+          <input type="url" id="image" name="image" class="form-control" placeholder="請輸入圖片網址"
+            value="{{restaurant.image}}">
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label mb-2">餐廳地址</label>
+          <input type="text" id="location" name="location" class="form-control" placeholder="請輸入地址"
+            value="{{restaurant.location}}">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label mb-2">餐廳電話</label>
+          <input type="tel" id="phone" name="phone" class="form-control" placeholder="請輸入電話號碼"
+            value="{{restaurant.phone}}">
+        </div>
+        <div class="mb-3">
+          <label for="google_map" class="form-label mb-2">Google Map 網址</label>
+          <input type="url" id="google_map" name="google_map" class="form-control" placeholder="請輸入 Google Map 網址"
+            value="{{restaurant.google_map}}">
+        </div>
+        <div class="mb-3">
+          <label for="rating" class="form-label mb-2">餐廳評分</label>
+          <input type="text" id="rating" name="rating" class="form-control" placeholder="請輸入評分"
+            value="{{restaurant.rating}}">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label mb-2">餐廳簡介</label>
+          <input type="text" id="description" name="description" class="form-control" placeholder="請簡單介紹餐廳"
+            value="{{restaurant.description}}">
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-outline-primary btn-block me-1">確認修改</button>
+          <a href="/"><button class="btn btn-secondary">取消</button></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
