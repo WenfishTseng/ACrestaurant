@@ -3,7 +3,7 @@ const router = express.Router();
 const Restaurant = require('../../models/restaurant');
 
 router.get('/', (req, res) => {
-  const userId = req.user._id + '12';
+  const userId = req.user._id;
   Restaurant.find({ userId })
     .lean()
     .sort({ _id: 'asc' })
