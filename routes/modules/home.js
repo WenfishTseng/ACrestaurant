@@ -3,12 +3,15 @@ const router = express.Router();
 const Restaurant = require('../../models/restaurant');
 
 router.get('/', (req, res) => {
-  const userId = req.user._id;
+  const userId = req.user._id + '12';
   Restaurant.find({ userId })
     .lean()
     .sort({ _id: 'asc' })
     .then((restaurants) => res.render('index', { restaurants }))
-    .catch((error) => console.error(error));
+    .catch((error) => {
+      console.error(error);
+      res.render('error');
+    });
 });
 
 router.get('/search', (req, res) => {
@@ -26,7 +29,6 @@ router.get('/search', (req, res) => {
   })
     .lean()
     .then((restaurants) => {
-      console.log('search ', restaurants);
       if (restaurants.length === 0) {
         res.render('index', {
           error: `您輸入的關鍵字：${keyword} 沒有符合條件的餐廳`,
@@ -36,7 +38,10 @@ router.get('/search', (req, res) => {
       }
       res.render('index', { restaurants, keyword });
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      console.log(error);
+      res.render('error');
+    });
 });
 
 module.exports = router;

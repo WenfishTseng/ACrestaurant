@@ -95,7 +95,10 @@ router.post(
           .then(() => res.redirect('/'))
           .catch((err) => console.log(err));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        res.render('error');
+      });
   }
 );
 
