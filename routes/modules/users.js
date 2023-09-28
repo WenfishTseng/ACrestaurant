@@ -97,7 +97,7 @@ router.post(
       })
       .catch((err) => {
         console.log(err);
-        res.render('error');
+        res.render('error', { error: error.message });
       });
   }
 );
